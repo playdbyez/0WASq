@@ -36,6 +36,7 @@ printf(userName)
 
 
 || ##################### ########################## EXPOSED FUNCTIONS #################### ################################## ||
+Functions that request the length of file as a parameter are  more secure
 
 [] fprintf()        = writes printf to a file
 [] printf()         = output formatted string
