@@ -17,8 +17,9 @@
     These tables are managed by a specific CPU register for the x86 architecture (CR3)
     And two specific registers for the ARM architecture (TTBR0 & TTBR1)
 
-[]  Translation Tables are organized in a directory like structure, consisting of at least a Page Directory Table (PDT)
-    and a Page Table Entries (PTE) which stores the physicall addresses with flags for faster retrieval.
+[]  The map from Virtual Addresses to Physical Adresses is the Page Table.
+    Page Tables are organized in a directory like structure, consisting of at least a Page Directory Table (PDT)
+    and a Page Table Entries (PTE) which stores within the DRAM the physical addresses with flags for faster retrieval.
 
 []  This Firmware exploit uses System Management Cycles to scrape the memory from dirty pages (pages previously updated in RAM)
     from the pages tables directory at the application layer & it makes use of System Interrupts to scrape outgoing HTTPS     
