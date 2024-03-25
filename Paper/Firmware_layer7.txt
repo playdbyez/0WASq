@@ -9,7 +9,8 @@
     and System Authentication in response to hardware events.
     These run time operations are enabled by a specific hardware interrupt that occurs before
     passing the control to the OS, this even prompts the interrupted core to invoke firmware execution upon the processor.
-    However due to the limited execution cycles firmware is allocated during runtime, it relies heavily on the memory size and     thus reclaiming compute resources beyond the intended time slice can cause the system to malfunction.
+    However due to the limited execution cycles firmware is allocated during runtime, it relies heavily on the memory size and     
+    thus reclaiming compute resources beyond the intended time slice can cause the system to malfunction.
 
 []  Paging is a mechanism for mapping a process' vitual address into a physical one.
     The kernel must utilize translation tables to track dow the physical addresses.
@@ -19,8 +20,11 @@
 []  Translation Tables are organized in a directory like structure, consisting of at least a Page Directory Table (PDT)
     and a Page Table Entries (PTE) which stores the physicall addresses with flags for faster retrieval.
 
-[]  This Firmware exploit uses System Management Cycles to scrape the memory from dirty pages (pages previously updated in         RAM) from the pages tables directory at the application layer & it makes use of System Interrupts to scrape outgoing HTTPS     POST requests with sensitive user-data.
-    This low overhead across both x86_64 and ARMv8 architectures is achieved by limiting the memory scan from the whole            subsystem to only the user accessible dirty pages from the translation tables directory
+[]  This Firmware exploit uses System Management Cycles to scrape the memory from dirty pages (pages previously updated in RAM)
+    from the pages tables directory at the application layer & it makes use of System Interrupts to scrape outgoing HTTPS     
+    POST requests with sensitive user-data.
+    This low overhead across both x86_64 and ARMv8 architectures is achieved by limiting the memory scan from the whole            
+    subsystem to only the user accessible dirty pages from the translation tables directory
 
 
 
