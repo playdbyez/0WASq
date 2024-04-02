@@ -33,25 +33,62 @@
 
 ################################ :: ATTACK SETUP :: ################################
 
-> Develop System firmware using Tiano core open source project (EUFI)
+<> Develop System firmware using Tiano core open source project (EUFI)
 youtube.com/watch?v=n9XtJkRRvUI
 youtube.com/watch?v=t3iwBQg_Gik
 
-> Use gem5 Simulator to test overhead of the process
+<> Use gem5 Simulator to test overhead of the process
 
-> Use QEMU to buil platforms for test harnesses which also use different interrupt rates for firmware
+<> Use QEMU to buil platforms for test harnesses which also use different interrupt rates for firmware
+
+<> Inject via firmware update process or use a supply chain attack on the target's system manufacture
+  alternatively use a spear-phishing technique mentioned bellow
+
+* https://www.blackhat.com/docs/us-14/materials/us-14-Kallenberg-Extreme-Privilege-Escalation-On-Windows8-UEFI-Systems-WP.pdf
+  https://www.youtube.com/watch?v=X_Jxsl3vVcA
+// Windows 8 UEFI
+
+* securelist.com/operation-shadowhammer/89992/
+// Infecting ASUS Live update utility for a supply chain attack.
+
+* https://www.welivesecurity.com/2018/09/27/lojax-first-uefi-rootkit-found-wild-courtesy-sednit-group/
+  https://www.youtube.com/watch?v=P3yMXspLzoY
+// Sednit LoJax
+
+<> Use a daisy-chained multicore approach for parsing HTTP requests present in memory
+
+<> The developed firmware must have an automatic routine built-in from its creation
+  this routine is used for triggering  Periodic Management Interrupt at boot-time of  the mastercore (core 0)
+  before initialization is finished and ownership of the system is handled back to the Operating System
+
+<> During boot the core must be informed with the rules for searching and parsing HTTP lingering in memory,
+  specifically a valid reques-line for the HTTP header ( Starts with POST ends with CR+LF )
+  furthermore the body of the ruequest is sometimes necessary and comes in the format of Json or Key/value form fields.
+
+<> A single core, then, resumes the search until its time slice expires and the search is halted while the core issues an Inter-Processor Interrupt (IPI)
+  to the next core to continue its search operation
+
+<> Before resuming, both cores synchronize and share information
 
 
 
 
 
+                              ################################  HTTP Pages ###########################
 
-################################ REFERENCES ###########################
+DESKTOP                                                                                              MOBILE
+Host          : facebook.com                                                          Host         : i.instagram.com
+Method        : POST                                                                  Method       : POST
+path          : /login/device-based/regular/login                                     Path         : /api/v1/accounts/login
+Content type  : application/ x-www-form-urlencoded                                    Content type : application/ json
+
+
+
+################################  :: REFERENCES :: ###########################
 
 MEMORY
 
-securelist.com/operation-shadowhammer/89992/
-// Infecting ASUS Live update utility for a supply chain attack.
+
 
 csoonline.com/article/537628/malware-cybercrime-dexter-malware-infects-point-of-sale-systems-worldwide-researchers-say.html
 // Point of Sale malware
@@ -107,9 +144,7 @@ INJECTION
 https://www.blackhat.com/docs/us-15/materials/us-15-Hudson-Thunderstrike-2-Sith-Strike.pdf
 https://darkmentor.com/prior-work/2015-08-blackhatusa/
 
-https://www.blackhat.com/docs/us-14/materials/us-14-Kallenberg-Extreme-Privilege-Escalation-On-Windows8-UEFI-Systems-WP.pdf
-https://www.youtube.com/watch?v=X_Jxsl3vVcA
-// Windows 8 UEFI
+
 
 https://www.youtube.com/watch?v=i9ULYwRK1iU
 //Windows 8 secure boot
