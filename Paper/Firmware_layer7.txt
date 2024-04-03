@@ -88,7 +88,12 @@ Content type  : application/ x-www-form-urlencoded                              
 
 MEMORY
 
+https://ftp.gnu.org/old-gnu/Manuals/glibc-2.2.3/html_chapter/libc_3.html
+// Manual
 
+Windows via C/C++ 
+Linux Observability with BPF: Advanced Programming for Performance Analysis and Networking
+// books on mem
 
 csoonline.com/article/537628/malware-cybercrime-dexter-malware-infects-point-of-sale-systems-worldwide-researchers-say.html
 // Point of Sale malware
