@@ -88,8 +88,11 @@ Content type  : application/ x-www-form-urlencoded                              
 
 MEMORY
 
+https://www.youtube.com/watch?v=WYuhJzngfVc
+//JHam hiding from memory scans
+
 https://ftp.gnu.org/old-gnu/Manuals/glibc-2.2.3/html_chapter/libc_3.html
-// Manual
+// Manual Basic
 
 Windows via C/C++ 
 Linux Observability with BPF: Advanced Programming for Performance Analysis and Networking
