@@ -84,8 +84,15 @@ becomes inactive and it awaits the next periodic management interrupt to occur.
 
 <> there also time restrictions to the completion of the scan,
 purely in order to avoid affecting the system's functionality and being detected.
-These restrictions are based on the systems Memory capac
+These restrictions are based on the systems Storage capacity which affects the systems page eviction process of deleting its logs to free memory.
+On ubuntu 18 LTS (104 mins)
+On Android oreo 8.1 (74 mins)
 
+<> The saved data can then only be retrieved during a reboot to a Command-and-Control server (C&C) through the firmware's own network stack.
+This is enabled by including the UEFI network stack within our firmware and dispatching it during boot to enable cummunication with the C&C server
+
+<> The saved data can also be retrieved while the OS is running by tweaking the firmware's boot-time and run-time phases to dispatch the network stack as a runtime module during boot.
+This module would only consume memory availabe through run-time services and by invoking all cores vian an IPI from the mastercore to sync them and finally send the data through the network
 
 
 
@@ -170,7 +177,6 @@ https://www.blackhat.com/docs/us-15/materials/us-15-Hudson-Thunderstrike-2-Sith-
 https://darkmentor.com/prior-work/2015-08-blackhatusa/
 
 
-
 https://www.youtube.com/watch?v=i9ULYwRK1iU
 //Windows 8 secure boot
 
@@ -200,3 +206,21 @@ https://core.ac.uk/download/pdf/277527615.pdf
 https://www.usenix.org/legacy/event/sec08/tech/full_papers/halderman/halderman.pdf
 https://www.youtube.com/watch?v=JDaicPIgn9U
 //Cold Boots
+
+
+https://web.cse.ohio-state.edu/~teodorescu.1/download/papers/bacha-isca13.pdf
+https://arxiv.org/pdf/2209.12134.pdf
+https://web.cse.ohio-state.edu/~teodorescu.1/resources/papers/bacha-micro14.pdf
+https://anysbacha.github.io/publications/bacha_micro15.pdf
+//Dynamic Reduction of Voltage Margins On ECC chip
+// Authenticache
+
+http://www.wcse.org/WCSE%202021/05.pdf
+//Vuln uefi
+
+https://www.whitehouse.gov/wp-content/uploads/2024/02/PCAST_Cyber-Physical-Resilience-Report_Feb2024.pdf
+
+https://scadahacker.com/library/Documents/ICS_Vulnerabilities/DigitalBond%20-%20Leverage%20Ethernet%20Vulnerabilities%20in%20Field%20Devices.pdf
+
+https://netsec.ethz.ch/publications/papers/li_mccune_perrig_viper_ccs2011.pdf
+
