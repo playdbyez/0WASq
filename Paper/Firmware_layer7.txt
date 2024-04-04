@@ -68,7 +68,24 @@ youtube.com/watch?v=t3iwBQg_Gik
 <> A single core, then, resumes the search until its time slice expires and the search is halted while the core issues an Inter-Processor Interrupt (IPI)
   to the next core to continue its search operation
 
-<> Before resuming, both cores synchronize and share information
+<> Before resuming, both cores synchronize and share information:
+  - The address of the last memory location that was parsed by the exiting core
+  - A pointer the the last PTE referenced
+  - A pointer to the next data structure that stores recovered credentials
+
+<> After synchronization is finished the previous core is relinquished by the firmware for normal execution while
+the next invoked core seumes searching the OS's Page Tables for table entries that have the flags D/U/W set :
+  -dirty
+  -user/supervisor 
+  -write set 
+
+<> Once the final core completes its time slice, the system firmware 
+becomes inactive and it awaits the next periodic management interrupt to occur.
+
+<> there also time restrictions to the completion of the scan,
+purely in order to avoid affecting the system's functionality and being detected.
+These restrictions are based on the systems Memory capac
+
 
 
 
