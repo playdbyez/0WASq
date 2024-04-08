@@ -131,7 +131,17 @@ wired.com/wp-content/uploads/2014/09/wp-pos-ram-scraper-malware.pdf
 siliconangle.com/2014/02/03/chewbacca-point-of-sale-malware-caught-stealing-credit-card-data/
 // Point of Sale 2014
 
+https://link.springer.com/chapter/10.1007/978-3-540-68979-9_5
+// Embedded Trusted Computing with Authenticated Non-volatile Memory
 
+https://www.ndss-symposium.org/wp-content/uploads/2017/09/towards-automated-dynamic-analysis-linux-based-embedded-firmware.pdf
+//
+
+https://www.blackhat.com/presentations/bh-usa-09/CHEN/BHUSA09-Chen-RevAppleFirm-PAPER.pdf
+//Reversing and exploiting an Apple firmware update
+
+https://yt.christiaan008.com/?project=black-hat-usa-2010-jackpotting-automated-teller-machines-redux-15
+//Redux
 
 
 flashpoint.io/blog/dmsniff-pos-malware-actively-leveraged-target-medium-sized-businesses/
