@@ -1,6 +1,6 @@
 #########:: FORMAT STRING ATK ::##########
 
-> This is a type of binary exploit occurs when an input submited is evaluated as a command by the application.
+> This type of binary exploit occurs when an input submited is evaluated as a command by the application.
 
 > The input is designed to change the behvaiour of the format function and cause new behaviours 
   that can compromise the security or the stability of the system.
