@@ -1,4 +1,4 @@
-
+An attack is defined as something an attacker would do to exploit an app's vulnerability 
 
 Binary Planting
 Blind SQL Injection
@@ -13,7 +13,7 @@ Cache Poisoning
 Cash Overflow 
 Clickjacking 
 Code Injection 
-Command Injection by Weilin Zhong
+Command Injection
 Comment Injection Attack 
 Content Spoofing 
 Credential stuffing
@@ -54,7 +54,7 @@ SQL Injection
 Server-Side Includes (SSI) Injection 
 Server Side Request Forgery 
 Session Prediction
-Session fixation by mwood
+Session fixation
 Session hijacking attack
 Setting Manipulation
 Special Element Injection
