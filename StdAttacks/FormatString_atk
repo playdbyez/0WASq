@@ -1,5 +1,9 @@
 #########:: FORMAT STRING ATK ::##########
 
+> Discovered circa 2001, it is rarely used today
+
+> Implemented via C language and its formatting text functions
+
 > This type of binary exploit occurs when an input submited is evaluated as a command by the application.
 
 > The input is designed to change the behvaiour of the format function and cause new behaviours 
@@ -12,6 +16,7 @@ I.E.
 If the application uses Format Functions in the source-code, that can interpret formatting 
 characters then the attacker could insert formating characters in a form of the website.
 So if the printf() function is used to print the username inserted in some fields of the page then the attack bellow can be used:
+
 printf(userName)
 
 
@@ -51,9 +56,11 @@ Functions that request the length of file as a parameter are  more secure
 > %x   =   reading data from the stack
 > %s   =   read characters from the process' memory
 > %n   =   write an int to locations in the process' memory
+> %n$x =   read the from the stack at string index n (> 7%x )
 
 
-
-
+https://ctf101.org/binary-exploitation/what-is-a-format-string-vulnerability/
+https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/13-Testing_for_Format_String_Injection
+https://cs155.stanford.edu/papers/formatstring-1.2.pdf
 
 
