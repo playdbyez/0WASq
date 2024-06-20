@@ -27,6 +27,7 @@ Cryptanalysis
 Custom Special Character Injection by Rezos
 Denial of Service by Nsrav
 Direct Dynamic Code Evaluation - Eval Injection
+Enumeration Attack
 Embedding Null Code by Nsrav
 Execution After Redirect (EAR) by Robert Gilbert (amroot)
 Forced browsing
