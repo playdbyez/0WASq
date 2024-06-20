@@ -6,6 +6,7 @@ Blind XPath Injection
 Brute Force Attack
 Buffer Overflow via Environment Variables
 Buffer Overflow Attack
+Cipher Suite Rollback Attack
 CORS OriginHeaderScrutiny
 CORS RequestPreflightScrutiny
 CSV Injection 
