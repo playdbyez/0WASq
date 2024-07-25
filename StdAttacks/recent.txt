@@ -1,0 +1,5 @@
+
+> (CSRF) Cross-Site request forgery flaw on embedded AI are common
+> DNS changer bug
+> Microsoft exchange bug
+> APT on Building-Automation Systems via ProxyLogon 
